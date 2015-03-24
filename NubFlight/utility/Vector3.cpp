@@ -56,6 +56,14 @@ Vector3& Vector3::operator/=(Scalar num)
 	return *this;
 }
 
+Vector3 Vector3::operator*(const Vector3 vector) {
+	return Vector3(X * vector.X, Y * vector.Y, Z * vector.Z);
+}
+
+Vector3 Vector3::pow(Vector3 vector) {
+	return Vector3(powf(X, vector.X), powf(Y, vector.Y), powf(Z, vector.Z));
+}
+
 void Vector3::print() const
 {
 	printf("X:%f, Y:%f, Z:%f\n", X, Y, Z);

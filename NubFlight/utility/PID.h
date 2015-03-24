@@ -32,7 +32,7 @@ public:
 	}
 	
 	void calculatePID() {
-		Float error = goal - input;
+		T error = goal - input;
 		d = error - p;
 		p = error;
 		i += p;

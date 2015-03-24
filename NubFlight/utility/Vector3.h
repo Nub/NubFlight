@@ -38,6 +38,9 @@ public:
 	Bool operator==(const Vector3& vector) const;
 	Bool operator!=(const Vector3& vector) const;
 
+	
+	Vector3 operator*(Vector3 vector);
+	Vector3 pow(Vector3 vector);
 	void print() const;
 
 	static const Vector3 Zero;

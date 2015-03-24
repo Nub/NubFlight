@@ -9,6 +9,8 @@
 #ifndef NubFlight_Types_h
 #define NubFlight_Types_h
 
+#include "Vector3.h"
+
 typedef float Float;
 
 typedef struct{

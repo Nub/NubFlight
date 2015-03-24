@@ -17,11 +17,15 @@
 class Controller: public Process {
 	Float throttle;
 	
-	Orientation controlInputs;
-	Orientation gain;
-	Orientation expo;
+	Vector3 controlInputs;
+	Vector3 controlGain;
+	Vector3 controlExpo;
 	
 public:
+	Vector3 adjustedInput() {
+		return (controlInputs * controlGain).pow(controlExpo);
+	}
+	
 	virtual void update() {
 		Process::update();
 		

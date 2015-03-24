@@ -35,6 +35,7 @@ public:
 		gyro.print();
 		
 		pid.input = gyro;
+//		pid.goal = controller
 		pid.update();
 		gyro += pid.output;
 		
